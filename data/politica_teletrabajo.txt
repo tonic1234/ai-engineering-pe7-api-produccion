@@ -1,0 +1,85 @@
+Política de Teletrabajo — Dendra
+
+1. OBJETIVO
+Definir el esquema de trabajo híbrido y remoto de Dendra, las condiciones de infraestructura
+que debe cumplir el colaborador, el subsidio de conectividad y las pautas de disponibilidad,
+seguridad y evaluación que aplican en los días no presenciales.
+
+2. ALCANCE
+Alcanza a todos los colaboradores cuyas funciones no requieran presencia física obligatoria.
+Cada área puede fijar esquemas particulares siempre que no reduzcan los mínimos establecidos
+en esta política. Los esquemas vigentes se acuerdan por escrito con el líder y quedan
+registrados en el legajo del colaborador.
+
+3. ESQUEMA ESTÁNDAR
+Dendra adopta un esquema de trabajo híbrido para todas las áreas cuyas funciones no requieran
+presencia física obligatoria. El esquema estándar es de 3 días de trabajo remoto y 2 días de
+trabajo presencial por semana, coordinados con el líder de equipo.
+
+Los equipos con proyectos bajo metodología ágil pueden acordar una semana por mes
+completamente remota ("semana de foco"), siempre que no coincida con hitos de entrega con
+cliente ni con sesiones de capacitación obligatorias.
+
+4. ÁREAS 100% PRESENCIALES
+Las áreas de Soporte Técnico Nivel 1 y Recepción mantienen un esquema 100% presencial por la
+naturaleza de sus funciones. Las áreas de Soporte Técnico Nivel 2 y Nivel 3 pueden rotar al
+esquema estándar si el líder garantiza la cobertura de las guardias presenciales de la semana.
+
+5. REQUISITOS DE INFRAESTRUCTURA
+Los colaboradores deben contar con:
+- conexión a internet estable de al menos 30 Mbps de bajada y 10 Mbps de subida;
+- un espacio de trabajo adecuado, con iluminación suficiente y libre de interrupciones;
+- cámara y micrófono funcionales para las reuniones con cliente;
+- conexión por VPN corporativa para acceder a los sistemas internos.
+
+La empresa provee un subsidio mensual para conectividad y equipamiento de home office, sujeto
+a la presentación de comprobantes. El subsidio cubre un porcentaje del servicio de internet y
+se liquida junto con el recibo de sueldo del mes siguiente. Los comprobantes se cargan en el
+sistema interno de Personas antes del día 20 de cada mes.
+
+6. DISPONIBILIDAD Y COMUNICACIÓN
+Durante los días de trabajo remoto, se espera que el colaborador esté disponible en el
+horario laboral habitual (9 a 18 hs) y responda a las comunicaciones internas dentro de un
+margen razonable. El incumplimiento reiterado de disponibilidad puede derivar en la revisión
+del esquema de teletrabajo asignado y, de mantenerse, en el retorno al esquema presencial.
+
+Las ausencias dentro del horario laboral (trámites, consultas médicas) deben avisarse al
+equipo por el canal correspondiente y registrarse en el sistema de licencias cuando
+corresponda. Se recomienda mantener una ventana de al menos 4 horas continuas de foco sin
+reuniones, acordada con el equipo.
+
+7. HERRAMIENTAS Y SEGURIDAD
+El trabajo remoto se realiza únicamente sobre las herramientas corporativas provistas por la
+empresa: notebook con perfil de gestión de dispositivos (MDM), repositorios de código
+corporativos y cuentas de correo de la organización. Está prohibido copiar información de
+clientes a servicios personales de almacenamiento o de mensajería.
+
+El acceso a sistemas internos desde fuera de la red corporativa exige autenticación de dos
+factores (2FA) y el uso de la VPN provista por IT. Ante robo, pérdida o falla del
+equipamiento, el colaborador debe notificarlo dentro de las 24 horas al área de IT.
+
+8. SALUD Y ERGONOMÍA
+La empresa entrega una guía de pausas activas y ergonomía para el puesto de teletrabajo. Se
+recomienda una pausa de 10 minutos cada 90 minutos de trabajo continuo frente a pantalla. Los
+colaboradores pueden solicitar una evaluación ergonómica del espacio de home office al área
+de Personas, que se realiza de forma remota con material fotográfico.
+
+9. EVALUACIÓN DEL ESQUEMA
+Cada líder revisa el esquema de su equipo al menos una vez por semestre, considerando
+entregas, satisfacción de clientes y resultados. Cambiar de esquema requiere 30 días de aviso
+y la firma de una adenda al contrato interno.
+
+10. PREGUNTAS FRECUENTES
+- ¿Cuántos días remotos me corresponden? El esquema estándar es de 3 días remotos y 2
+  presenciales por semana, coordinados con el líder.
+- ¿Qué velocidad de internet necesito? Al menos 30 Mbps de bajada y 10 Mbps de subida.
+- ¿La empresa paga parte de mi internet? Sí, hay un subsidio mensual de conectividad, contra
+  presentación de comprobantes.
+- ¿Puedo trabajar desde otra ciudad o país? Sí, por hasta 30 días continuos por año, con
+  aviso previo al líder y autorización de Personas, respetando la normativa fiscal aplicable.
+- ¿Qué pasa si no cumplo la disponibilidad? Se revisa el esquema asignado y puede derivar en
+  el retorno al esquema presencial.
+
+11. VIGENCIA
+Esta política rige desde el 1 de marzo de 2026. Los esquemas acordados con anterioridad
+mantienen su validez hasta la próxima revisión semestral.

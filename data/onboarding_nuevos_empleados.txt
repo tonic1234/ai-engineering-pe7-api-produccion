@@ -1,0 +1,68 @@
+Proceso de Onboarding — Dendra
+
+1. OBJETIVO
+Ordenar la incorporación de nuevos colaboradores para que cuenten con accesos, herramientas,
+contexto de negocio y acompañamiento desde el primer día, y para que el equipo que los recibe
+tenga claras sus responsabilidades durante las primeras seis semanas.
+
+2. ALCANCE
+Aplica a todas las incorporaciones de Dendra, cualquiera sea el área y la modalidad de
+contratación, incluidas las recontrataciones y los pases internos entre áreas.
+
+3. ETAPAS
+El proceso de incorporación de nuevos colaboradores en Dendra dura 6 semanas y está compuesto
+por tres etapas: inducción general, capacitación específica del rol y acompañamiento con un
+mentor asignado (buddy).
+
+4. SEMANA 1 — ANTES DEL INGRESO Y PRIMER DÍA
+Personas confirma el alta en el legajo y notifica a IT con al menos 5 días hábiles de
+anticipación para que prepare las credenciales. IT entrega la cuenta de correo, los accesos a
+los sistemas internos y el equipamiento.
+
+Durante la primera semana, el nuevo colaborador recibe sus credenciales de acceso, el
+equipamiento de trabajo y participa de una inducción general sobre la cultura de la empresa y
+las políticas internas vigentes. El primer día incluye la firma de la política de seguridad
+informática y la activación de la autenticación de dos factores.
+
+5. SEMANAS 2 A 4 — CAPACITACIÓN DEL ROL
+El líder del equipo define un plan de capacitación específico del rol con objetivos
+observables por semana. Las sesiones se documentan en la carpeta del equipo y quedan
+disponibles para consulta posterior. El nuevo colaborador debe completar la capacitación
+obligatoria de seguridad de la información y de manejo de datos de clientes.
+
+6. SEMANA 3 — PRIMERA REVISIÓN
+En la semana 3 se realiza una primera revisión de avance junto al líder del equipo, con foco
+en: comprensión del rol, herramientas dominadas y bloqueos detectados. De esta revisión puede
+surgir un ajuste del plan de capacitación.
+
+7. SEMANA 6 — CIERRE
+En la semana 6 se realiza una reunión de cierre de onboarding entre el nuevo colaborador, su
+líder y Personas, donde se define el plan de objetivos para los primeros seis meses. En esa
+misma reunión se registra la retroalimentación del proceso y se evalúa si el acompañamiento
+del buddy continúa de forma informal.
+
+8. ROLES
+- Personas: coordina el proceso, notifica las altas, entrega la inducción general y hace
+  seguimiento de los hitos de las semanas 1, 3 y 6.
+- IT: prepara credenciales, equipamiento y accesos, y los desactiva en los egresos.
+- Líder de equipo: define el plan de capacitación del rol, asigna el buddy y conduce las
+  revisiones.
+- Buddy (mentor): acompaña en las dudas del día a día durante las primeras 6 semanas, al
+  menos con una reunión semanal de 30 minutos.
+- Nuevo colaborador: completar la capacitación obligatoria y participar activamente de las
+  revisiones.
+
+9. PREGUNTAS FRECUENTES
+- ¿Cuánto dura el onboarding? 6 semanas, con hitos en las semanas 1, 3 y 6.
+- ¿Quién me asigna un mentor? El líder de equipo, durante la primera semana.
+- ¿Qué pasa si no recibo los accesos el primer día? Se escala a IT por el canal de soporte,
+  con copia a Personas.
+- ¿Hay un período de prueba? Sí, de 3 meses, con una evaluación al final del mismo.
+
+10. INDICADORES
+Se mide el porcentaje de accesos otorgados antes del primer día, el cumplimiento de los hitos
+de las semanas 1, 3 y 6 y la satisfacción del nuevo colaborador al cierre del proceso.
+
+11. VIGENCIA
+Este proceso rige desde el 1 de abril de 2026 y se revisa cada seis meses con el área de
+Personas.

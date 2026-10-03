@@ -1,0 +1,100 @@
+Política de Vacaciones — Dendra
+
+1. OBJETIVO
+Esta política establece las reglas para la solicitud, aprobación y registro de los días de
+descanso anual pago de los colaboradores de Dendra, así como los criterios de cálculo del
+saldo según la antigüedad, el prorrateo por ingreso o egreso en el año y el régimen especial
+que aplica durante la temporada de mayor carga de proyectos.
+
+2. ALCANCE
+Aplica a todos los colaboradores en relación de dependencia directa de Dendra, en cualquiera
+de sus áreas y modalidades de trabajo (presencial, híbrida o remota). No aplica a
+colaboradores contratados como proveedores externos ni a pasantes con convenio educativo
+vigente, que se rigen por el régimen de licencias de su contrato.
+
+3. DEFINICIONES
+- Antigüedad: tiempo continuo trabajado en la empresa, contado desde la fecha de ingreso
+  registrada en el legajo. Las recontrataciones conservan la antigüedad sólo si la
+  interrupción fue menor a 90 días corridos y con acuerdo previo de Personas.
+- Día hábil: día de lunes a viernes, excluyendo feriados nacionales y no laborables.
+- Período vacacional: el año calendario, del 1 de enero al 31 de diciembre.
+- Saldo: días hábiles acumulados y no gozados que el colaborador puede solicitar.
+
+4. TRAMOS POR ANTIGÜEDAD
+Todos los colaboradores en relación de dependencia directa de Dendra tienen derecho a días
+de descanso anual pago, calculados según su antigüedad en la empresa. Los tramos vigentes son:
+
+- Menos de 3 años de antigüedad: 15 días hábiles de vacaciones por año calendario.
+- 3 años o más, y hasta 8 años de antigüedad: 20 días hábiles por año calendario.
+- Más de 8 años de antigüedad: 25 días hábiles por año calendario.
+
+El tramo se determina con la antigüedad que el colaborador cumple dentro del período
+vacacional considerado. Si un colaborador cruza el límite de un tramo durante el año (por
+ejemplo, cumple 3 años en julio), los días del primer semestre se calculan con el tramo
+anterior y los del segundo con el tramo nuevo, prorrateados por mes.
+
+5. CÁLCULO DEL SALDO Y PRORRATEO
+- Ingreso durante el año: los días se calculan de forma proporcional a los meses completos
+  trabajados desde la fecha de ingreso (1/12 del saldo anual por mes completo).
+- Egreso durante el año: se liquida el saldo proporcional a los meses completos trabajados en
+  el período, más los días no gozados de períodos anteriores.
+- Cambio de tramo durante el año: se aplica el criterio del punto 4 (prorrateo por semestre).
+- Los días se cuentan siempre en días hábiles; los feriados que caigan dentro del período
+  solicitado no se descuentan.
+
+6. SOLICITUD Y APROBACIÓN
+Las vacaciones deben solicitarse con un mínimo de 20 días de anticipación a través del
+sistema interno de Personas, y quedan sujetas a la aprobación del líder de equipo directo.
+El líder debe responder la solicitud dentro de los 5 días hábiles de recibida. Ante silencio,
+la solicitud se escala al área de Personas, que resuelve en un plazo máximo de 3 días hábiles.
+
+No se autorizan solicitudes que superpongan más del 50% de un mismo equipo en el mismo
+período, salvo autorización expresa del gerente de área.
+
+7. ACUMULACIÓN Y TRANSFERENCIA
+No se acumulan más de 5 días de un período al siguiente, salvo autorización expresa de
+Personas por motivos operativos. Los días que superen ese tope al cierre del período se
+pierden, salvo que exista una justificación de negocio documentada por el líder y aprobada
+por Personas antes del 31 de diciembre.
+
+8. RÉGIMEN ESPECIAL DE ENERO
+Durante el mes de enero se aplica un régimen especial de guardias mínimas para garantizar la
+continuidad de los proyectos de clientes, por lo que las solicitudes de vacaciones en ese
+período están sujetas a un cupo máximo por equipo (hasta 25% del equipo de forma simultánea).
+Las solicitudes para enero deben presentarse antes del 30 de noviembre del año anterior.
+
+9. LICENCIAS ESPECIALES (NO DESCUENTAN SALDO)
+Estos días no se descuentan del saldo vacacional y se solicitan por el sistema de Personas:
+- Matrimonio: 5 días hábiles.
+- Nacimiento o adopción de hijo: 3 días hábiles para quien no hace uso de la licencia
+  parental obligatoria.
+- Fallecimiento de familiar directo: 5 días hábiles.
+- Mudanza: 1 día hábil.
+- Exámenes académicos: hasta 4 días hábiles por año calendario, con constancia de la
+  institución.
+
+10. PREGUNTAS FRECUENTES
+- ¿Cuántos días me corresponden si tengo menos de 3 años en la empresa? 15 días hábiles por
+  año calendario.
+- ¿Y si tengo entre 3 y 8 años de antigüedad? 20 días hábiles por año calendario.
+- ¿Y con más de 8 años? 25 días hábiles por año calendario.
+- ¿Con cuánta anticipación debo pedirlas? Con un mínimo de 20 días de anticipación.
+- ¿Puedo transferir todos mis días al año siguiente? No: el tope de acumulación es de 5 días,
+  salvo autorización expresa de Personas.
+- ¿Puedo tomar vacaciones en enero? Sí, sujeto al cupo máximo por equipo, presentando la
+  solicitud antes del 30 de noviembre.
+- ¿Los feriados que caen dentro de mis vacaciones se descuentan? No, sólo se descuentan los
+  días hábiles.
+
+11. RESPONSABLES
+- Colaborador: solicitar en plazo, informar su planificación al equipo y dejar sus tareas
+  cubiertas antes de salir.
+- Líder de equipo: aprobar o rechazar en plazo, garantizando la cobertura operativa.
+- Personas: administrar el sistema interno, resolver excepciones y auditar el cumplimiento de
+  esta política.
+
+12. VIGENCIA Y EXCEPCIONES
+Esta política rige desde el 1 de enero de 2026 y reemplaza a las versiones anteriores.
+Cualquier excepción debe quedar registrada por escrito con la firma del responsable del área
+de Personas. Los casos no previstos se resuelven según la normativa laboral vigente y el
+criterio del área de Personas.

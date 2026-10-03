@@ -1,0 +1,75 @@
+Política de Seguridad Informática — Dendra
+
+1. OBJETIVO
+Definir las reglas mínimas de seguridad de la información que deben cumplir todos los
+colaboradores de Dendra para proteger los datos de la empresa y de sus clientes, y establecer
+cómo se reportan y se escalan los incidentes.
+
+2. ALCANCE
+Aplica a todo colaborador con acceso a sistemas internos, en cualquiera de sus modalidades de
+trabajo, y también a proveedores externos con accesos temporales otorgados por IT.
+
+3. AUTENTICACIÓN
+Todo colaborador con acceso a sistemas internos de Dendra debe utilizar autenticación de dos
+factores (2FA) en las plataformas corporativas de correo, repositorios de código y sistemas de
+gestión interna, sin excepción. El segundo factor debe ser una aplicación de autenticación o
+una llave de seguridad física; el envío por mensaje de texto sólo se admite como método de
+respaldo temporal, autorizado por IT.
+
+4. CONTRASEÑAS
+Las contraseñas deben tener un mínimo de 14 caracteres, combinando mayúsculas, minúsculas,
+números y símbolos, y deben renovarse cada 60 días. Está prohibido reutilizar contraseñas de
+servicios personales en sistemas corporativos, compartir credenciales entre colaboradores y
+almacenarlas en notas sin cifrar o en archivos de texto plano.
+
+La empresa provee un gestor de contraseñas corporativo. Las credenciales de servicio (cuentas
+técnicas usadas por aplicaciones) se administran exclusivamente desde el gestor y se rotan
+cada 180 días.
+
+5. CLASIFICACIÓN DE LA INFORMACIÓN
+La información se clasifica en pública, interna, confidencial y restringida. La información de
+clientes (listados, métricas de campaña, datos de contacto y facturación) se considera
+confidencial como mínimo. Está prohibido copiar información confidencial a servicios
+personales de almacenamiento, mensajería o correo no corporativo.
+
+6. REPORTE DE INCIDENTES
+Ante la sospecha de un incidente de seguridad (phishing, acceso no autorizado o pérdida de un
+dispositivo corporativo), el colaborador debe notificar de inmediato al área de Seguridad de
+la Información a través del canal interno de incidentes, dentro de la primera hora de
+detectado el evento. No se debe intentar investigar por cuenta propia ni contactar al
+presunto atacante.
+
+El equipo de Seguridad clasifica el incidente en hasta 4 horas y define si corresponde
+bloquear accesos, rotar credenciales o notificar al cliente afectado. Ocultar un incidente o
+demorar el reporte es una falta grave.
+
+7. DISPOSITIVOS Y BYOD
+El uso de dispositivos personales para acceder a sistemas corporativos (BYOD) requiere la
+instalación previa del perfil de gestión de dispositivos móviles (MDM) provisto por el área
+de IT. Los dispositivos corporativos deben tener cifrado de disco activo y bloqueo automático
+de pantalla a los 5 minutos de inactividad.
+
+Está prohibido instalar software no autorizado, desactivar el antivirus o conectar medios
+extraíbles desconocidos en equipos corporativos.
+
+8. CORREO Y PHISHING
+Los correos con enlaces a dominios externos que pidan credenciales deben reportarse con el
+botón de reporte de phishing del cliente de correo. El área de Seguridad publica un boletín
+mensual con los intentos detectados y las señales de alerta más frecuentes.
+
+9. ACCESOS Y BAJAS
+Los accesos se otorgan por el principio de menor privilegio y se revisan cada 6 meses. Ante
+el egreso de un colaborador, IT desactiva sus cuentas dentro de las 4 horas de notificado el
+egreso y Personas confirma el cierre del legajo.
+
+10. PREGUNTAS FRECUENTES
+- ¿El 2FA es obligatorio? Sí, en correo, repositorios de código y sistemas de gestión.
+- ¿Cada cuánto cambio la contraseña? Cada 60 días, con un mínimo de 14 caracteres.
+- ¿Puedo usar mi computadora personal? Sólo con el perfil MDM instalado por IT.
+- ¿En cuánto tiempo reporto un incidente? Dentro de la primera hora de detectado.
+- ¿Qué hago si recibo un correo sospechoso? Reportarlo con el botón de phishing y no abrir
+  los enlaces.
+
+11. VIGENCIA
+Esta política rige desde el 1 de febrero de 2026 y se revisa una vez por año o ante cambios
+relevantes en la infraestructura.
