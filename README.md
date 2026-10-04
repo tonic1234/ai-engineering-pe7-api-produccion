@@ -144,6 +144,9 @@ están en `screenshots/`:
   costo estimado en dólares de la corrida.
 - `04-api-docs.png` — la API documentada y navegable que trae FastAPI (`/docs`), con los cuatro
   endpoints y los esquemas de entrada y salida.
+- `05-aprobacion-humana.png` — el nodo `aprobacion` de una corrida real, con el input que lo
+  reanudó: `{"resume": {"aprobado": true, "comentario": "ok, adelante"}}`. Es la pausa y la
+  aprobación vistas desde el dashboard.
 
 Dejar la instrumentación sólo sobre LangChain fue a propósito: Phoenix, si no, engancha también
 FastAPI y cada consulta de estado del cliente deja su span, así que el dashboard se llena de
@@ -225,7 +228,8 @@ están en `app/hitl.py` y los cubre `tests/test_hitl.py`.
 
 La aprobación se pide una sola vez por trabajo. Cuando llega, el grafo sigue desde el checkpoint y
 las rondas siguientes del supervisor ya no vuelven a preguntar (me pasó en la primera corrida:
-pedía permiso en cada ronda y no cerraba nunca).
+pedía permiso en cada ronda y no cerraba nunca). En `screenshots/05-aprobacion-humana.png` está el
+nodo con el input que lo reanudó, leído del dashboard.
 
 ## Las pruebas (112, sin claves y sin red)
 
