@@ -81,15 +81,31 @@ curl -s localhost:8000/tareas/b330e27b92f8
 ```
 
 Si la consulta pide una acción con efecto, el trabajo no llega a `done` solo: queda esperando la
-aprobación con la instrucción a la vista.
+aprobación con la instrucción a la vista. Esta es la salida real de una corrida (la consulta pedía
+"enviar por correo el resumen"):
 
 ```bash
-curl -s localhost:8000/tareas/<job_id>
-# {"estado":"esperando_aprobacion","instruccion_pendiente":"...",...}
+curl -s localhost:8000/tareas/ae7a06d57526
+```
+```json
+{"job_id":"ae7a06d57526","estado":"esperando_aprobacion",
+ "pregunta":"Enviá por correo el resumen de la política de seguridad informática y decime cuántos días de vacaciones tiene alguien con 4 años de antigüedad.",
+ "resultado":null,"error":null,"pasos":0,"contribuciones":[],
+ "instruccion_pendiente":"Buscá la política de seguridad informática para resumirla y la política de vacaciones que detalle la cantidad de días correspondientes según los años de antigüedad, incluyendo sus fuentes.",
+ "hilo_id":"b8b1b873b304",
+ "creada_en":"2026-10-04T23:36:25+00:00","actualizada_en":"2026-10-04T23:36:29+00:00"}
+```
 
-curl -s -X POST localhost:8000/tareas/<job_id>/aprobar -H 'content-type: application/json' \
-  -d '{"aprobado":true,"comentario":"ok"}'
-# {"job_id":"...","estado":"aprobado"}
+Fijate que el trabajo quedó en `pasos: 0`: no se ejecutó nada del equipo, la instrucción está
+esperando. Recién con la aprobación sigue:
+
+```bash
+curl -s -X POST localhost:8000/tareas/ae7a06d57526/aprobar \
+  -H 'content-type: application/json' -d '{"aprobado":true,"comentario":"adelante"}'
+# {"job_id":"ae7a06d57526","estado":"aprobado"}
+
+# y un rato después, el mismo GET de la consulta del estado
+# {"estado":"done","pasos":2,"contribuciones":[{"agente":"investigador"},{...}]}
 ```
 
 Aprobar algo que no está esperando devuelve 409 con el estado en el que está, y no un 200 mudo.
@@ -126,8 +142,8 @@ están en `screenshots/`:
   investigador → herramientas → modelo), y arriba a la derecha el costo y la latencia de esa traza.
 - `03-latencia-costos.png` — la vista de métricas: los percentiles de latencia (p50 a p99) y el
   costo estimado en dólares de la corrida.
-- `04-esperando-aprobacion.png` — la respuesta del endpoint con el trabajo pausado y la instrucción
-  que quedó esperando la aprobación.
+- `04-api-docs.png` — la API documentada y navegable que trae FastAPI (`/docs`), con los cuatro
+  endpoints y los esquemas de entrada y salida.
 
 Dejar la instrumentación sólo sobre LangChain fue a propósito: Phoenix, si no, engancha también
 FastAPI y cada consulta de estado del cliente deja su span, así que el dashboard se llena de

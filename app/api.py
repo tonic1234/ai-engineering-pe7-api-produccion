@@ -7,16 +7,29 @@ consulta el estado con polling: es el patrón que pide el módulo.
 
 from __future__ import annotations
 
+import json
 import logging
 import os
 
 from fastapi import FastAPI, HTTPException, status
+from fastapi.responses import JSONResponse
 
 from app.cola import ColaRedis, ahora
 from app.esquemas import AprobacionIn, EstadoJob, InformeJob, TareaCreada, TareaIn
 from app.observabilidad import activar_trazas, trazas_activas
 
 log = logging.getLogger(__name__)
+
+
+class RespuestaLegible(JSONResponse):
+    """JSON en UTF-8, sin escapar los acentos.
+
+    Por defecto, el JSON sale con las tildes escapadas (\\u00ed) y cualquier persona que lea la
+    respuesta ve ruido en vez del texto. El contenido es el mismo, sólo se escribe legible.
+    """
+
+    def render(self, content) -> bytes:
+        return json.dumps(content, ensure_ascii=False, allow_nan=False, separators=(",", ":")).encode("utf-8")
 
 CAMPOS_INFORME = (
     "job_id", "estado", "pregunta", "resultado", "error", "pasos",
@@ -40,6 +53,7 @@ def crear_app(cola: ColaRedis | None = None, ejecutor=None, instrumentar: bool =
         title="API del orquestador multi-agente",
         version="1.0",
         description="Encola la consulta, la corre en un worker y expone el estado del trabajo.",
+        default_response_class=RespuestaLegible,
     )
     app.state.cola = cola
     app.state.ejecutor = ejecutor
