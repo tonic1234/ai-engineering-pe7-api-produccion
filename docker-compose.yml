@@ -1,0 +1,67 @@
+services:
+  # Redis con los modulos de busqueda y JSON: los checkpoints del grafo los necesitan
+  # (con un Redis pelado, el RedisSaver no puede crear sus indices).
+  redis:
+    image: redis:8-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - datos-redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # Phoenix: el dashboard de trazas queda en http://localhost:6006
+  phoenix:
+    image: arizephoenix/phoenix:latest
+    ports:
+      - "6006:6006"
+    environment:
+      PHOENIX_WORKING_DIR: /mnt/phoenix
+    volumes:
+      - datos-phoenix:/mnt/phoenix
+
+  api:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      PHOENIX_COLLECTOR_ENDPOINT: http://phoenix:6006/v1/traces
+      PHOENIX_PROJECT_NAME: pre-entrega-7
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      PINECONE_API_KEY: ${PINECONE_API_KEY}
+      PINECONE_NAMESPACE: ${PINECONE_NAMESPACE:-politicas-dendra}
+      PINECONE_REGION: ${PINECONE_REGION:-us-east-1}
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - cache-huggingface:/root/.cache/huggingface
+
+  # El worker es el mismo codigo en otro proceso: no comparte memoria con la API.
+  worker:
+    build: .
+    command: python -m app.worker_main
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      PHOENIX_COLLECTOR_ENDPOINT: http://phoenix:6006/v1/traces
+      PHOENIX_PROJECT_NAME: pre-entrega-7
+      WORKER_CONCURRENCIA: "3"
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      PINECONE_API_KEY: ${PINECONE_API_KEY}
+      PINECONE_NAMESPACE: ${PINECONE_NAMESPACE:-politicas-dendra}
+      PINECONE_REGION: ${PINECONE_REGION:-us-east-1}
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - cache-huggingface:/root/.cache/huggingface
+
+volumes:
+  datos-redis:
+  datos-phoenix:
+  cache-huggingface:

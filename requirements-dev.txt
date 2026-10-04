@@ -1,0 +1,6 @@
+# Para correr las pruebas (van aparte de lo que necesita el servidor)
+-r requirements.txt
+pytest>=8.0
+pytest-asyncio>=1.0
+fakeredis>=2.30
+httpx>=0.28
