@@ -133,6 +133,53 @@ Dejar la instrumentación sólo sobre LangChain fue a propósito: Phoenix, si no
 FastAPI y cada consulta de estado del cliente deja su span, así que el dashboard se llena de
 `GET /tareas/<id>` y las trazas del grafo quedan enterradas.
 
+## Lo que dice el dashboard
+
+Miré las trazas de todas las corridas (45 ejecuciones, 115 llamadas al modelo) y agrupé por tipo
+de span. Los contenedores (`LangGraph`, `supervisor`) incluyen a sus hijos, así que sus segundos
+no se suman a los de las llamadas: sirven para ver dónde está el peso.
+
+| Tipo de span | Veces | Latencia acumulada | Tokens |
+|---|---|---|---|
+| LangGraph (cada corrida completa) | 45 | 963,6 s | — |
+| ChatGoogleGenerativeAI (llamadas al modelo) | 115 | 524,7 s | 245.761 |
+| supervisor (la decisión) | 43 | 272,6 s | (incluye su llamada) |
+| buscar_en_politicas_internas (la herramienta) | 26 | 102,5 s | (incluye su llamada) |
+| EnsembleRetriever (la recuperación en sí) | 20 | 16,2 s | — |
+| aprobacion | 45 | 1,0 s | — |
+| validacion | 12 | 0,5 s | — |
+
+Lo que se lee ahí:
+
+1. **La latencia está en el modelo, no en el resto.** De los 963 segundos acumulados de corridas,
+   525 se van en las llamadas a Gemini (el 54%, con un promedio de 4,6 s y picos de 7,2 s). La
+   recuperación híbrida tarda 0,8 s por consulta y la validación 0,04 s, porque es código.
+   Si hubiera que bajar el p95 el camino no es optimizar el retriever: es hacer menos rondas de
+   supervisor, que es lo que multiplica las llamadas.
+2. **Los tokens los consumen las decisiones.** El supervisor llama al modelo en cada ronda para
+   decidir a quién delega; la síntesis, una vez al final. En una corrida de dos dominios son 5 o 6
+   llamadas: por eso el gasto por ejecución queda en el orden de un centavo.
+3. **El nodo de aprobación no cuesta nada.** 45 pausas, 0,04 s de promedio y cero tokens: lo único
+   que hace es frenar. Y mientras espera la aprobación, el grafo tampoco consume: en la traza de una
+   corrida pausada se ve el hueco entre el último span antes de la pausa y el primero después.
+
+La traza de una corrida que pasó por aprobación humana, en orden:
+
+| # | Nodo | Latencia | Tokens |
+|---|---|---|---|
+| 1 | supervisor (decide delegar) | 4,4 s | 773 |
+| 2 | aprobacion (pausa, espera permiso) | 0,0 s | 0 |
+| 3 | investigador (búsqueda + redacción del aporte) | 33,6 s | 3.018 |
+| 4 | supervisor (pide el cálculo) | 7,2 s | 2.417 |
+| 5 | aprobacion (la tarea ya estaba aprobada) | 0,0 s | 0 |
+| 6 | analista (calculadora + redacción) | 5,1 s | 2.539 |
+| 7 | supervisor (cierra) | 2,0 s | 907 |
+| 8 | validacion (¿la rúbrica se cumple?) | 0,0 s | 0 |
+| 9 | sintesis (redacta la respuesta) | 3,4 s | 974 |
+
+Esa corrida quedó pausada varios minutos esperando la aprobación, así que su traza dura mucho más
+que el trabajo real del equipo: el tiempo de espera no aparece como span porque no consume nada.
+
 ## El grafo
 
 ```mermaid
