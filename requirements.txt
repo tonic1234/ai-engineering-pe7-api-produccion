@@ -21,6 +21,10 @@ pydantic>=2.13
 python-dotenv>=1.2
 tiktoken>=0.14
 
-# Observabilidad: Phoenix local + el instrumentor de LangChain
+# Observabilidad: Phoenix local, el instrumentor de LangChain y el exportador OTLP.
+# El exportador y el SDK de OpenTelemetry vienen con Phoenix, pero los declaro porque
+# app/observabilidad.py los importa de forma directa.
 arize-phoenix>=12.0
 openinference-instrumentation-langchain>=0.1
+opentelemetry-sdk>=1.30
+opentelemetry-exporter-otlp-proto-http>=1.30

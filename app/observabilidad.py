@@ -75,7 +75,7 @@ def activar_trazas(endpoint: str | None = None) -> bool:
         _instrumentar(endpoint)
         _ACTIVAS = True
         log.info("trazas activas: proyecto '%s' -> %s", nombre_proyecto(), endpoint)
-    except Exception as error:  # noqa: BLE001 — si Phoenix no está, el sistema tiene que seguir
+    except Exception as error:  # noqa: BLE001: si Phoenix no está, el sistema tiene que seguir
         log.warning("no se pudo activar la instrumentación (%s): la corrida sigue sin trazas", error)
         _ACTIVAS = False
 

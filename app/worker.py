@@ -30,7 +30,7 @@ async def procesar_job(job_id: str, cola, ejecutor, reanudacion: dict | None = N
 
     try:
         salida = await ejecutor(datos["pregunta"], reanudacion)
-    except Exception as error:  # noqa: BLE001 — sin esto el cliente queda en polling infinito
+    except Exception as error:  # noqa: BLE001: sin esto el cliente queda en polling infinito
         log.warning("el trabajo %s falló: %s", job_id, error)
         return await cola.actualizar(
             job_id, EstadoJob.FALLO, error=f"{type(error).__name__}: {error}"[:500]

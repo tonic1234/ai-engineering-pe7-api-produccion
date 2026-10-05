@@ -109,7 +109,7 @@ class ColaRedis:
     async def esta_viva(self) -> bool:
         try:
             return bool(await self.cliente.ping())
-        except Exception:  # noqa: BLE001 — el health tiene que contestar, no explotar
+        except Exception:  # noqa: BLE001: el health tiene que contestar, no explotar
             return False
 
     async def limpiar_todo(self) -> None:
