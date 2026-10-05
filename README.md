@@ -144,9 +144,9 @@ están en `screenshots/`:
   costo estimado en dólares de la corrida.
 - `04-api-docs.png` — la API documentada y navegable que trae FastAPI (`/docs`), con los cuatro
   endpoints y los esquemas de entrada y salida.
-- `05-aprobacion-humana.png` — el nodo `aprobacion` de una corrida real, con el input que lo
-  reanudó: `{"resume": {"aprobado": true, "comentario": "ok, adelante"}}`. Es la pausa y la
-  aprobación vistas desde el dashboard.
+- `05-aprobacion-humana.png` — la misma traza de la 02, con el nodo `aprobacion` seleccionado y su
+  input a la vista: `{"resume": {"aprobado": true, "comentario": "ok, adelante"}}`. Es la pausa y
+  la aprobación leídas del dashboard.
 
 Dejar la instrumentación sólo sobre LangChain fue a propósito: Phoenix, si no, engancha también
 FastAPI y cada consulta de estado del cliente deja su span, así que el dashboard se llena de
